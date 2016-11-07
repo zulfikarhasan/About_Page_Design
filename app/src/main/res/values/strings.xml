@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Details_Page</string>
-    <string name="description">Ezze Technology offers a wide range of Internet related service including IT consulting and wed marketing</string>
+    <string name="app_name">Details</string>
+    <string name="description">
+        Ezze Technology offers a wide range of Internet related service including IT consulting and wed marketing
+
+
+
+    </string>
     <string name="address">Flat-A1,House No-41,Road No-08,Block-E,Banasree,Rampura,Dhaka</string>
 </resources>

@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context="etl.com.bd.details_page.MainActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -23,6 +23,8 @@
         android:layout_height="150dp"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="65dp"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
         android:id="@+id/logo_layout">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
@@ -36,152 +38,203 @@
     </RelativeLayout>
 
 
-    <RelativeLayout
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_below="@+id/logo_layout"
+      android:weightSum="1">
+
+      <ScrollView
+
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:fitsSystemWindows="true"
+          android:layout_margin="15dp">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:weightSum="4"
+          android:layout_marginTop="10dp">
+          <TextView
+              android:id="@+id/tv_Name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Name:"
+              android:layout_weight="3"/>
+
+          <TextView
+              android:id="@+id/company_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Ezze Technology Ltd."
+              android:layout_weight="1"/>
+
+          </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:weightSum="4"
+                  android:layout_marginTop="10dp">
+                  <TextView
+                      android:id="@+id/tv_description"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Description:"
+                      android:layout_weight="3"/>
+
+                  <TextView
+                      android:id="@+id/description"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/description"
+                      android:layout_weight="1"/>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="10dp"
+                  android:weightSum="4">
+                  <TextView
+                      android:id="@+id/tv_address"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Address:"
+                      android:layout_weight="3"/>
+
+                  <TextView
+                      android:id="@+id/address"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/address"
+                      android:layout_weight="1"/>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="25dp"
+                  android:orientation="horizontal"
+                  android:weightSum="4"
+                  android:layout_marginTop="10dp">
+                  <TextView
+                      android:id="@+id/tv_number"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:text="Number:"
+                      />
+
+                  <TextView
+                      android:id="@+id/number"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:text="01834580056"
+
+                      />
+
+                   <ImageView
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:layout_weight="1"
+                       android:src="@drawable/phone"/>
+                  <ImageView
+                      android:layout_width="20dp"
+                      android:layout_height="20dp"
+                      android:layout_weight="1"
+                      android:src="@drawable/msg"/>
+              </LinearLayout>
+
+
+
+
+
+
+          </LinearLayout>
+      </ScrollView>
+
+
+
+
+  </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logo_layout"
-        android:id="@+id/details_layout"
-        android:layout_marginTop="12dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
-
-
-        <TextView
-            android:text="Name:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="22dp"
-            android:layout_marginStart="22dp"
-            android:id="@+id/tv_name"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:text="Ezze Technology Ltd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="100dp"
-            android:id="@+id/name" />
-
-        <TextView
-            android:text="Desription:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="22dp"
-            android:layout_marginTop="25dp"
-            android:id="@+id/tv_discreption" />
-
-        <TextView
-            android:text="@string/description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/discreption"
-            android:layout_alignBaseline="@+id/tv_discreption"
-            android:layout_alignBottom="@+id/tv_discreption"
-            android:layout_alignLeft="@+id/name"
-            android:layout_alignStart="@+id/name" />
-
-        <TextView
-            android:text="Address:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="22dp"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="110dp"
-            android:id="@+id/tv_Address" />
-
-        <TextView
-            android:text="@string/address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="103dp"
-            android:layout_marginStart="103dp"
-            android:layout_marginTop="109dp"
-            android:id="@+id/address" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/details_layout"
-        android:layout_marginTop="56dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
         android:background="#ec4b4b"
-        android:id="@+id/relativeLayout">
-        <View
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:id="@+id/view" />
 
-        <ImageButton
-            android:id="@+id/btn_email"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/img_bg"
-            android:src="@drawable/sms"
-            android:layout_marginLeft="31dp"
-            android:layout_marginStart="31dp"
-            android:layout_alignTop="@+id/btn_facebook"
-            android:layout_toRightOf="@+id/btn_facebook"
-            android:layout_toEndOf="@+id/btn_facebook" />
-
-        <ImageButton
-            android:id="@+id/btn_twitter"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/img_bg"
-            android:src="@drawable/tw"
-            android:layout_marginLeft="33dp"
-            android:layout_marginStart="33dp"
-            android:layout_alignTop="@+id/btn_email"
-            android:layout_toRightOf="@+id/btn_email"
-            android:layout_toEndOf="@+id/btn_email" />
-
-
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        >
         <View
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1" />
 
         <ImageButton
-            android:id="@+id/btn_google_plus"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/img_bg"
-            android:src="@drawable/googleplash"
-            android:layout_marginLeft="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_alignTop="@+id/btn_twitter"
-            android:layout_toRightOf="@+id/btn_twitter"
-            android:layout_toEndOf="@+id/btn_twitter" />
-
-        <ImageButton
             android:id="@+id/btn_facebook"
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/img_bg"
-            android:src="@drawable/fac"
-            android:layout_marginLeft="46dp"
-            android:layout_marginStart="46dp"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/view"
-            android:layout_toEndOf="@+id/view" />
+            android:src="@drawable/fac" />
+        <ImageButton
+            android:id="@+id/btn_email"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/sms" />
+        <ImageButton
+            android:id="@+id/btn_twitter"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/tw" />
+
+        <ImageButton
+            android:id="@+id/btn_google_plus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/googleplash" />
 
 
-    </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/btn_linkedin"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/linkedin"
+             />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"  />
+    </LinearLayout>
 
 
 
