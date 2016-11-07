@@ -119,12 +119,36 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="#ec4b4b"
-        >
+        android:id="@+id/relativeLayout">
         <View
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:id="@+id/view" />
+
+        <ImageButton
+            android:id="@+id/btn_email"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/sms"
+            android:layout_marginLeft="31dp"
+            android:layout_marginStart="31dp"
+            android:layout_alignTop="@+id/btn_facebook"
+            android:layout_toRightOf="@+id/btn_facebook"
+            android:layout_toEndOf="@+id/btn_facebook" />
+
+        <ImageButton
+            android:id="@+id/btn_twitter"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/tw"
+            android:layout_marginLeft="33dp"
+            android:layout_marginStart="33dp"
+            android:layout_alignTop="@+id/btn_email"
+            android:layout_toRightOf="@+id/btn_email"
+            android:layout_toEndOf="@+id/btn_email" />
 
 
         <View
@@ -133,55 +157,32 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:id="@+id/btn_twitter"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/img_bg"
-            android:src="@drawable/tw"
-            android:layout_marginLeft="23dp"
-            android:layout_marginStart="23dp"
-            android:layout_alignTop="@+id/btn_facebook"
-            android:layout_toRightOf="@+id/btn_facebook"
-            android:layout_alignBottom="@+id/btn_facebook" />
-
-        <ImageButton
-            android:id="@+id/btn_email"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/img_bg"
-            android:src="@drawable/sms"
-            android:layout_alignTop="@+id/btn_twitter"
-            android:layout_toRightOf="@+id/btn_twitter"
-            android:layout_toEndOf="@+id/btn_twitter"
-            android:layout_marginLeft="39dp"
-            android:layout_marginStart="39dp" />
-
-        <ImageButton
-            android:id="@+id/btn_googlePlass"
+            android:id="@+id/btn_google_plus"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@drawable/img_bg"
             android:src="@drawable/googleplash"
-            android:layout_marginLeft="47dp"
-            android:layout_marginStart="47dp"
-            android:layout_alignTop="@+id/btn_email"
-            android:layout_toRightOf="@+id/btn_email"
-            android:layout_toEndOf="@+id/btn_email" />
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_alignTop="@+id/btn_twitter"
+            android:layout_toRightOf="@+id/btn_twitter"
+            android:layout_toEndOf="@+id/btn_twitter" />
 
         <ImageButton
             android:id="@+id/btn_facebook"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@drawable/img_bg"
-            android:src="@drawable/facebook"
-            android:layout_marginLeft="40dp"
-            android:layout_marginStart="40dp"
+            android:src="@drawable/fac"
+            android:layout_marginLeft="46dp"
+            android:layout_marginStart="46dp"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/view"
             android:layout_toEndOf="@+id/view" />
 
 
     </RelativeLayout>
+
 
 
 </RelativeLayout>
