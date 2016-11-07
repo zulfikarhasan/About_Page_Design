@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="etl.com.bd.details_page.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bg_layout">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="65dp"
+        android:id="@+id/logo_layout">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/unnamed"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_layout"
+        android:id="@+id/details_layout"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+
+        <TextView
+            android:text="Name:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:id="@+id/tv_name"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Ezze Technology Ltd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="100dp"
+            android:id="@+id/name" />
+
+        <TextView
+            android:text="Desription:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="25dp"
+            android:id="@+id/tv_discreption" />
+
+        <TextView
+            android:text="@string/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/discreption"
+            android:layout_alignBaseline="@+id/tv_discreption"
+            android:layout_alignBottom="@+id/tv_discreption"
+            android:layout_alignLeft="@+id/name"
+            android:layout_alignStart="@+id/name" />
+
+        <TextView
+            android:text="Address:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="110dp"
+            android:id="@+id/tv_Address" />
+
+        <TextView
+            android:text="@string/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="103dp"
+            android:layout_marginStart="103dp"
+            android:layout_marginTop="109dp"
+            android:id="@+id/address" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/details_layout"
+        android:layout_marginTop="56dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ec4b4b"
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:id="@+id/view" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_twitter"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/tw"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_alignTop="@+id/btn_facebook"
+            android:layout_toRightOf="@+id/btn_facebook"
+            android:layout_alignBottom="@+id/btn_facebook" />
+
+        <ImageButton
+            android:id="@+id/btn_email"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/sms"
+            android:layout_alignTop="@+id/btn_twitter"
+            android:layout_toRightOf="@+id/btn_twitter"
+            android:layout_toEndOf="@+id/btn_twitter"
+            android:layout_marginLeft="39dp"
+            android:layout_marginStart="39dp" />
+
+        <ImageButton
+            android:id="@+id/btn_googlePlass"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/googleplash"
+            android:layout_marginLeft="47dp"
+            android:layout_marginStart="47dp"
+            android:layout_alignTop="@+id/btn_email"
+            android:layout_toRightOf="@+id/btn_email"
+            android:layout_toEndOf="@+id/btn_email" />
+
+        <ImageButton
+            android:id="@+id/btn_facebook"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/facebook"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/view"
+            android:layout_toEndOf="@+id/view" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
